@@ -126,5 +126,4 @@ if __name__ == '__main__':
         print("Los resultados son correctos")
         print("----------------------------")
 
-    # Vaciar bucket
     pw.call_async(resetData, 0)
