@@ -6,18 +6,6 @@ import sys
 
 BUCKET_NAME = 'mutex'
 N_SLAVES = 0
-config = {
-    'pywren' : {'storage_bucket' : BUCKET_NAME},
-    'ibm_cf':  {'endpoint': 'ENDPOINT', 
-                'namespace': 'NAMESPACE', 
-                'api_key': 'API_KEY'}, 
-    'ibm_cos': {
-                'private_endpoint': 'PRIVATE_ENDPOINT',
-                'endpoint': 'ENDPOINT',
-                "access_key": "ACCESS_KEY", 
-                "secret_key": "SECRET_KEY"
-                }
-    }
 
 def resetData(id, x, ibm_cos):
 
@@ -107,7 +95,7 @@ if __name__ == '__main__':
         print("El número de slaves no puede ser superior a 100")
         sys.exit()
 
-    pw = pywren.ibm_cf_executor(config=config)  
+    pw = pywren.ibm_cf_executor()  
     pw.map(slave, range(N_SLAVES))
     pw.call_async(master, 0)
     write_permission_list = pw.get_result()
