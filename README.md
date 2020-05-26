@@ -49,3 +49,12 @@ Esto lo podríamos evitar haciendo que cada nodo se autogestione el borrado de p
 ### c. In the proposed algorithm, write permissions are granted in the order in which are requested, so no slave function waits forever (no starvation). If the master function chose the slaves functions randomly, then could slave functions suffer from starvation?
 
 No, ya que al ir eliminando las peticiones de los slaves del bucket al final vamos a terminar seleccionando todos los slaves. El peor caso del FIFO sería que un slave tendría que esperar a otros 99 slaves, que es el mismo caso que si lo hacemos al azar.
+
+## Referencias
+
+https://github.com/pywren/pywren-ibm-cloud
+
+https://github.com/JosepSampe/pywren-ibm-cloud
+
+## Repartición de tareas
+La repartición de tareas ha sido equitativa ya que hemos realizado todo el trabajo juntos.
