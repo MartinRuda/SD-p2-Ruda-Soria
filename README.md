@@ -1,6 +1,8 @@
 # SD-p2-Ruda-Soria
 Practica 2 - Sistemes distribuits
 
+### Autores: Martn Ruda, Sergi Soria
+
 ## Nuestra Solución
 Para realizar esta práctica hemos seguido la estructura dada en el enunciado. Por eso las funciones que hemos utilizado son las siguientes: 
 
